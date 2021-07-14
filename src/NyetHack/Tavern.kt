@@ -8,14 +8,32 @@ const val TAVENR_NAME = "Tearnyl's Folly"
 var playerGold = 10
 var playerSilver = 10
 val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
+val lastName = listOf("Ironfoot","Fernsworth","Beggins")
+val uniquePatron = mutableSetOf<String>()
 val menuList = File("src/data/tavern-menu-items.txt")
     .readText()
     .split("\r\n")
 
+
 fun main() {
-    menuList.forEachIndexed { index, data ->
-        println("${index + 1}: $data")
+    (0..9).forEach {
+        val first = patronList.shuffled().first()
+        val last =lastName.shuffled().last()
+        val name = "$first $last"
+        uniquePatron += name
     }
+
+    var orderCount = 0
+    while (orderCount <= 9) {
+        placeOrder(uniquePatron.shuffled().first(),
+        menuList.shuffled().first())
+        orderCount++
+    }
+
+    // 파일데이터 가지고와서 출력하기
+//    menuList.forEachIndexed { index, data ->
+//        println("${index + 1}: $data")
+//    }
 
 //    var baverage = readLine()
     // let 사용
@@ -50,10 +68,10 @@ fun main() {
 //        println("좋은 밤입니다. ${patron}님")
 //    }
     // list forEachIndex
-    patronList.forEachIndexed { index, patron ->
-        println("좋은 밤입니다. ${patron}님 당신은 ${index + 1}번째 손님입니다")
-        placeOrder(patron, menuList.shuffled().first())
-    }
+//    patronList.forEachIndexed { index, patron ->
+//        println("좋은 밤입니다. ${patron}님 당신은 ${index + 1}번째 손님입니다")
+//        placeOrder(patron, menuList.shuffled().first())
+//    }
 
 
 }
