@@ -14,6 +14,8 @@ val menuList = File("src/data/tavern-menu-items.txt")
     .readText()
     .split("\r\n")
 
+val patronGold = mapOf("Eli" to 10.5 , "Mordoc" to 8.0, "Sophie" to 5.5)
+
 
 fun main() {
     (0..9).forEach {
@@ -30,6 +32,7 @@ fun main() {
         orderCount++
     }
 
+    println(patronGold)
     // 파일데이터 가지고와서 출력하기
 //    menuList.forEachIndexed { index, data ->
 //        println("${index + 1}: $data")
