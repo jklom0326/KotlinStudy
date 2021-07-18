@@ -5,8 +5,8 @@ import kotlin.math.roundToInt
 
 const val TAVENR_NAME = "Tearnyl's Folly"
 
-var playerGold = 10
-var playerSilver = 10
+//var playerGold = 10
+//var playerSilver = 10
 val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
 val lastName = listOf("Ironfoot", "Fernsworth", "Beggins")
 val uniquePatron = mutableSetOf<String>()
@@ -17,7 +17,7 @@ val menuList = File("src/data/tavern-menu-items.txt")
 //val patronGold = mapOf(
 //    Pair("Eli", 10.5), Pair("Mordoc", 8.0), Pair("Sophie", 5.5)
 //)
-    val patronGold = mutableMapOf<String, Double>()
+val patronGold = mutableMapOf<String, Double>()
 
 
 fun main() {
@@ -28,6 +28,10 @@ fun main() {
         uniquePatron += name
     }
 
+    uniquePatron.forEach {
+        patronGold[it] = 6.0
+    }
+
     var orderCount = 0
     while (orderCount <= 9) {
         placeOrder(
@@ -36,12 +40,7 @@ fun main() {
         )
         orderCount++
     }
-    uniquePatron.forEach {
-        patronGold[it] = 6.0
-    }
 
-
-    println(patronGold)
 //    println(patronGold["Eli"])
 //    println(patronGold["Mordoc"])
 //    println(patronGold["Sophie"])
@@ -91,44 +90,40 @@ fun main() {
 
 
 }
-
-fun performPurchase(price: Double): Boolean {
-    displayBalance()
-    val totalPurse = playerGold + (playerSilver / 100.0)
-    println("지갑 전체 금액: 금화 $totalPurse")
-    if (totalPurse >= price) {
-        println("금화 $price 개로 술을 구입함")
-        val remainingBalance = totalPurse - price
-        println("남은 잔액: ${"%.2f".format(remainingBalance)}")
-
-        val remainingGold = remainingBalance.toInt()
-        val remainingSilver = (remainingBalance % 1 * 100).roundToInt()
-        playerGold = remainingGold
-        playerSilver = remainingSilver
-        displayBalance()
-    } else {
-        println("돈이 부족해!")
-        return false
-    }
-    return true
-}
-
-fun displayBalance() {
-    println("플레이어의 지갑 잔액: 금화: $playerGold 개, 은화: $playerSilver 개")
-}
+//
+//fun performPurchase(price: Double): Boolean {
+//    displayBalance()
+//    val totalPurse = playerGold + (playerSilver / 100.0)
+//    println("지갑 전체 금액: 금화 $totalPurse")
+//    if (totalPurse >= price) {
+//        println("금화 $price 개로 술을 구입함")
+//        val remainingBalance = totalPurse - price
+//        println("남은 잔액: ${"%.2f".format(remainingBalance)}")
+//
+//        val remainingGold = remainingBalance.toInt()
+//        val remainingSilver = (remainingBalance % 1 * 100).roundToInt()
+//        playerGold = remainingGold
+//        playerSilver = remainingSilver
+//        displayBalance()
+//    } else {
+//        println("돈이 부족해!")
+//        return false
+//    }
+//    return true
+//}
+//
+//fun displayBalance() {
+//    println("플레이어의 지갑 잔액: 금화: $playerGold 개, 은화: $playerSilver 개")
+//}
 
 private fun placeOrder(patronName: String, menuData: String) {
     val indexOfApostrophe = TAVENR_NAME.indexOf('\'')
     val tavenMaster = TAVENR_NAME.substring(0 until indexOfApostrophe)
     println("${patronName}은 ${tavenMaster}에게 주문합니다.")
 
-//    val data = menuData.split(',')
-//    val type = data[0]
-//    val name = data[1]
-//    val price = data[2]
-
     val (type, name, price) = menuData.split(',')
-//    if (performPurchase(price.toDouble())) {
+    performPurchase(price.toDouble(), patronName)
+//    if (performPurchase(price.toDouble(), patronName)) {
     val message = "${patronName}은 금화 $price 로 $name ($type)를 구입한다."
     println(message)
 
@@ -152,3 +147,8 @@ private fun toDragonSpeak(phrase: String) =
             else -> it.value
         }
     }
+
+fun performPurchase(price: Double, patronName: String) {
+    val totalPurse = patronGold.getValue(patronName)
+    patronGold[patronName] = totalPurse - price
+}
