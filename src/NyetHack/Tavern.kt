@@ -8,31 +8,44 @@ const val TAVENR_NAME = "Tearnyl's Folly"
 var playerGold = 10
 var playerSilver = 10
 val patronList = mutableListOf("Eli", "Mordoc", "Sophie")
-val lastName = listOf("Ironfoot","Fernsworth","Beggins")
+val lastName = listOf("Ironfoot", "Fernsworth", "Beggins")
 val uniquePatron = mutableSetOf<String>()
 val menuList = File("src/data/tavern-menu-items.txt")
     .readText()
     .split("\r\n")
 
-val patronGold = mapOf("Eli" to 10.5 , "Mordoc" to 8.0, "Sophie" to 5.5)
+//val patronGold = mapOf(
+//    Pair("Eli", 10.5), Pair("Mordoc", 8.0), Pair("Sophie", 5.5)
+//)
+    val patronGold = mutableMapOf<String, Double>()
 
 
 fun main() {
     (0..9).forEach {
         val first = patronList.shuffled().first()
-        val last =lastName.shuffled().last()
+        val last = lastName.shuffled().last()
         val name = "$first $last"
         uniquePatron += name
     }
 
     var orderCount = 0
     while (orderCount <= 9) {
-        placeOrder(uniquePatron.shuffled().first(),
-        menuList.shuffled().first())
+        placeOrder(
+            uniquePatron.shuffled().first(),
+            menuList.shuffled().first()
+        )
         orderCount++
     }
+    uniquePatron.forEach {
+        patronGold[it] = 6.0
+    }
+
 
     println(patronGold)
+//    println(patronGold["Eli"])
+//    println(patronGold["Mordoc"])
+//    println(patronGold["Sophie"])
+
     // 파일데이터 가지고와서 출력하기
 //    menuList.forEachIndexed { index, data ->
 //        println("${index + 1}: $data")
