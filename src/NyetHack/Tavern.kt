@@ -40,6 +40,7 @@ fun main() {
         )
         orderCount++
     }
+    displayPatronBalances()
 
 //    println(patronGold["Eli"])
 //    println(patronGold["Mordoc"])
@@ -87,10 +88,9 @@ fun main() {
 //        println("좋은 밤입니다. ${patron}님 당신은 ${index + 1}번째 손님입니다")
 //        placeOrder(patron, menuList.shuffled().first())
 //    }
-
-
 }
-//
+
+//  지불하기
 //fun performPurchase(price: Double): Boolean {
 //    displayBalance()
 //    val totalPurse = playerGold + (playerSilver / 100.0)
@@ -115,6 +115,12 @@ fun main() {
 //fun displayBalance() {
 //    println("플레이어의 지갑 잔액: 금화: $playerGold 개, 은화: $playerSilver 개")
 //}
+
+// 잔액변경 map을 이용함
+fun performPurchase(price: Double, patronName: String) {
+    val totalPurse = patronGold.getValue(patronName)
+    patronGold[patronName] = totalPurse - price
+}
 
 private fun placeOrder(patronName: String, menuData: String) {
     val indexOfApostrophe = TAVENR_NAME.indexOf('\'')
@@ -148,7 +154,8 @@ private fun toDragonSpeak(phrase: String) =
         }
     }
 
-fun performPurchase(price: Double, patronName: String) {
-    val totalPurse = patronGold.getValue(patronName)
-    patronGold[patronName] = totalPurse - price
+private fun displayPatronBalances() {
+    patronGold.forEach { patron, balance ->
+        println("$patron, balance: ${"%.2f".format(balance)}")
+    }
 }
