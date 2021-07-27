@@ -1,18 +1,23 @@
 package Part04
 
+import NyetHack.Player
+
 fun main() {
-    val name = "마드리갈"
+//    val name = "마드리갈"
     val healthPoints = 89
     val isBlessed = true
     val isImmortal = false
+
+    val player = Player()
+    player.name = "estroagon"
+    println(player.name + "TheBrave")
+    player.castFireball()
 
     // 아우라
     val auraColor = auraColor(isBlessed, healthPoints, isImmortal)
     val healthStatus = foramtHealthStatus(healthPoints, isBlessed)
 
-    printPlayerStatus(auraColor, isBlessed, name, healthStatus)
-    castFireball()
-//    castFireball()
+    printPlayerStatus(auraColor, isBlessed, player.name, healthStatus)
     performCombvat()
     performCombvat("Ulrich")
     performCombvat("Hildr",true)
@@ -55,10 +60,6 @@ private fun foramtHealthStatus(healthPoints: Int, isBlessed: Boolean) =
         in 15..79 -> "많이 다친 것 같음."
         else -> " 최악의 상태임!"
     }
-
-
-private fun castFireball(numFireballs: Int = 2) =
-    println("한 덩어리의 파이어볼이 나타난다. (x$numFireballs)")
 
 fun performCombvat(){
     println("적군이 없다!")

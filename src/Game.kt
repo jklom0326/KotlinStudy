@@ -1,5 +1,7 @@
 package Part03.NyetHack
 
+import NyetHack.Player
+
 fun main() {
     val name = "마드리갈"
     val healthPoints = 89
