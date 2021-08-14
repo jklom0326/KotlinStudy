@@ -29,6 +29,7 @@ class Player {
         }
         return auraColor
     }
+
     fun foramtHealthStatus() =
         when (healthPoints) {
             100 -> " 최상의 상태임!"
