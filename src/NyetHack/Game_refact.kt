@@ -3,14 +3,15 @@ package Part04
 import NyetHack.Player
 
 fun main() {
-    val player = Player()
+    val player = Player("Madrigal")
+    player.name = "estragon"
     println(player.name + "TheBrave")
     player.castFireball()
 
     // 아우라
 //    val auraColor = auraColor(isBlessed, healthPoints, isImmortal)
 //    val healthStatus = foramtHealthStatus(healthPoints, isBlessed)
-//
+
     printPlayerStatus(player)
     performCombvat()
     performCombvat("Ulrich")
