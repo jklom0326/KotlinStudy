@@ -1,18 +1,26 @@
 package NyetHack
 
+import java.io.File
+
 class Player(
-     _name: String,
+    _name: String,
     var healthPoints: Int,
     val isBlessed: Boolean,
+    // 플레이어 클래스 외부에서 사용되지 않기 때문에 캡슐화 해주는게 좋다
     private val isImmortal: Boolean
 ) {
     var name = _name
-        get() = field.capitalize()
+        get() = "${field.capitalize()} of $homtown"
         set(value) {
             field = value.trim()
         }
+    val homtown by lazy { selectHometown() }
 
-    // 플레이어 클래스 외부에서 사용되지 않기 때문에 캡슐화 해주는게 좋다
+    private fun selectHometown() = File("src/data/towns.txt")
+        .readText()
+        .split("\r\n")
+        .shuffled()
+        .first()
 
     fun castFireball(numFireballs: Int = 2) =
         println("한 덩어리의 파이어볼이 나타난다. (x$numFireballs)")
@@ -45,10 +53,12 @@ class Player(
             else -> " 최악의 상태임!"
         }
 
-    constructor(name:String): this(name,
-    healthPoints =100,
-    isBlessed = true,
-    isImmortal = false){
-        if(name.toLowerCase() == "kar") healthPoints = 40
+    constructor(name: String) : this(
+        name,
+        healthPoints = 100,
+        isBlessed = true,
+        isImmortal = false
+    ) {
+        if (name.toLowerCase() == "kar") healthPoints = 40
     }
 }
