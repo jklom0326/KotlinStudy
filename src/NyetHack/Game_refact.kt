@@ -1,12 +1,17 @@
 package Part04
 
 import NyetHack.Player
+import NyetHack.Room
 
 fun main() {
     val player = Player("Madrigal")
     player.name = "estragon"
     println(player.name + "TheBrave")
     player.castFireball()
+
+    var currentRoom = Room("Foyer")
+    println(currentRoom.description())
+    println(currentRoom.load())
 
     // 아우라
 //    val auraColor = auraColor(isBlessed, healthPoints, isImmortal)
