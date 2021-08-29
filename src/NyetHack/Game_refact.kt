@@ -2,6 +2,7 @@ package Part04
 
 import NyetHack.Player
 import NyetHack.Room
+import NyetHack.TownSquare
 
 fun main() {
     val player = Player("Madrigal")
@@ -9,7 +10,7 @@ fun main() {
     println(player.name + "TheBrave")
     player.castFireball()
 
-    var currentRoom = Room("Foyer")
+    var currentRoom:Room = TownSquare()
     println(currentRoom.description())
     println(currentRoom.load())
 
