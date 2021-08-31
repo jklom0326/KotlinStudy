@@ -14,6 +14,7 @@ fun main() {
 object Game {
     private val player = Player("Madrigal")
     private var currentRoom: Room = TownSquare()
+    var whileIsTrue = true
 
     private var worldMap = listOf(
         listOf(currentRoom, Room("Tarvern"), Room("Back Room")),
@@ -37,12 +38,23 @@ object Game {
             player.currentPosition = newPosition
             currentRoom = newRoom
             "$direction 방향의 ${newRoom.name}으로 이동했습니다."
-        } catch (e:Exception) {
+        } catch (e: Exception) {
             "잘못된 방향임 : $directionInput"
         }
 
+    private fun map() = let {
+        var mapString = ""
+        worldMap.forEach { listRoom ->
+            listRoom.forEach {
+                mapString += if (it == currentRoom) 'X' else "O"
+            }
+            mapString += "\n"
+        }
+        mapString.trim()
+    }
+
     fun play() {
-        while (true) {
+        while (whileIsTrue) {
             // 게임 시작
             println(currentRoom.description())
             println(currentRoom.load())
@@ -61,7 +73,11 @@ object Game {
         val argument = input.split(" ").getOrElse(1, { "" })
 
         fun processCommand() = when (command.toLowerCase()) {
-
+            "move" -> move(argument)
+            "exit", "quit" -> {
+                whileIsTrue = false; " Quitting..."
+            }
+            "map" -> "\n" + map()
             else -> commandNotFound()
         }
 
