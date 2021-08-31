@@ -1,8 +1,10 @@
 package Part04
 
+import NyetHack.Direction
 import NyetHack.Player
 import NyetHack.Room
 import NyetHack.TownSquare
+import java.lang.IllegalStateException
 
 fun main() {
 
@@ -13,10 +15,31 @@ object Game {
     private val player = Player("Madrigal")
     private var currentRoom: Room = TownSquare()
 
+    private var worldMap = listOf(
+        listOf(currentRoom, Room("Tarvern"), Room("Back Room")),
+        listOf(Room("Long Corridor"), Room("Generic Room"))
+    )
+
     init {
         println("방문을 환영합니다.")
         player.castFireball()
     }
+
+    private fun move(directionInput: String) =
+        try {
+            val direction = Direction.valueOf(directionInput.toUpperCase())
+            val newPosition = direction.updateCoordinate(player.currentPosition)
+            if (!newPosition.isInBounds) {
+                throw IllegalStateException("$direction 쪽 방향이 범위를 벗어남.")
+            }
+
+            val newRoom = worldMap[newPosition.y][newPosition.x]
+            player.currentPosition = newPosition
+            currentRoom = newRoom
+            "$direction 방향의 ${newRoom.name}으로 이동했습니다."
+        } catch (e:Exception) {
+            "잘못된 방향임 : $directionInput"
+        }
 
     fun play() {
         while (true) {
