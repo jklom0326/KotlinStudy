@@ -1,10 +1,8 @@
 package Part04
 
-import NyetHack.Direction
-import NyetHack.Player
-import NyetHack.Room
-import NyetHack.TownSquare
+import NyetHack.*
 import java.lang.IllegalStateException
+import kotlin.system.exitProcess
 
 fun main() {
 
@@ -24,6 +22,28 @@ object Game {
     init {
         println("방문을 환영합니다.")
         player.castFireball()
+    }
+
+    private fun fight() = currentRoom.monster?.let {
+        while (player.healthPoints > 0 && it.healthPoints > 0) {
+            slay(it)
+            Thread.sleep(1000)
+        }
+        "전투가 끝났음."
+    } ?: "여기에는 싸울 괴물이 없습니다...."
+
+    private fun slay(monster: Monster) {
+        println("${monster.name}-- ${monster.attack(player)} 손상을 입힘!")
+        println("${player.name}-- ${player.attack(player)} 손상을 입힘!")
+
+        if (player.healthPoints <= 0){
+            println(">>>>> 당신은 졌습니다! 게임을 종료합니다. <<<<<")
+            exitProcess(0)
+        }
+        if (monster.healthPoints <= 0){
+            println(">>>>> ${monster.name}-- 격퇴됨 <<<<<")
+            currentRoom.monster = null
+        }
     }
 
     private fun move(directionInput: String) =
@@ -73,6 +93,7 @@ object Game {
         val argument = input.split(" ").getOrElse(1, { "" })
 
         fun processCommand() = when (command.toLowerCase()) {
+            "fight" -> fight()
             "move" -> move(argument)
             "exit", "quit" -> {
                 whileIsTrue = false; " Quitting..."
