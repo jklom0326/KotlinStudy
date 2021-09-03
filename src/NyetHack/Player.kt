@@ -7,8 +7,8 @@ class Player(
     override var healthPoints: Int,
     val isBlessed: Boolean,
     // 플레이어 클래스 외부에서 사용되지 않기 때문에 캡슐화 해주는게 좋다
-    private val isImmortal: Boolean) : Fightable
-{
+    private val isImmortal: Boolean
+) : Fightable {
     var name = _name
         get() = "${field.capitalize()} of $homtown"
         set(value) {
@@ -63,17 +63,17 @@ class Player(
         if (name.toLowerCase() == "kar") healthPoints = 40
     }
 
-    override val diceCount: Int =3
+    override val diceCount: Int = 3
 
-    override val diceSides: Int =6
+    override val diceSides: Int = 6
 
     override fun attack(oppenent: Fightable): Int {
         val damageDealt = if (isBlessed) {
             damageRoll * 2
-        } else{
+        } else {
             damageRoll
         }
         oppenent.healthPoints -= damageDealt
-        return  damageDealt
+        return damageDealt
     }
 }
