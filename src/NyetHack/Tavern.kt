@@ -1,7 +1,7 @@
 package NyetHack
 
+import extensions.random
 import java.io.File
-import kotlin.math.roundToInt
 
 const val TAVENR_NAME = "Tearnyl's Folly"
 
@@ -19,10 +19,9 @@ val menuList = File("src/data/tavern-menu-items.txt")
 //)
 val patronGold = mutableMapOf<String, Double>()
 
-
 fun main() {
     (0..9).forEach {
-        val first = patronList.shuffled().first()
+        val first = patronList.random()
         val last = lastName.shuffled().last()
         val name = "$first $last"
         uniquePatron += name
@@ -35,8 +34,8 @@ fun main() {
     var orderCount = 0
     while (orderCount <= 9) {
         placeOrder(
-            uniquePatron.shuffled().first(),
-            menuList.shuffled().first()
+            uniquePatron.random(),
+            menuList.random()
         )
         orderCount++
     }
@@ -86,7 +85,7 @@ fun main() {
     // list forEachIndex
 //    patronList.forEachIndexed { index, patron ->
 //        println("좋은 밤입니다. ${patron}님 당신은 ${index + 1}번째 손님입니다")
-//        placeOrder(patron, menuList.shuffled().first())
+//        placeOrder(patron, menuList.random())
 //    }
 }
 

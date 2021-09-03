@@ -1,5 +1,6 @@
 package NyetHack
 
+import extensions.random
 import java.io.File
 
 class Player(
@@ -20,8 +21,7 @@ class Player(
     private fun selectHometown() = File("src/data/towns.txt")
         .readText()
         .split("\r\n")
-        .shuffled()
-        .first()
+        .random()
 
     fun castFireball(numFireballs: Int = 2) =
         println("한 덩어리의 파이어볼이 나타난다. (x$numFireballs)")
