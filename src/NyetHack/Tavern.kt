@@ -41,9 +41,9 @@ fun main() {
     }
     displayPatronBalances()
 
-//    println(patronGold["Eli"])
-//    println(patronGold["Mordoc"])
-//    println(patronGold["Sophie"])
+    println(patronGold["Eli"])
+    println(patronGold["Mordoc"])
+    println(patronGold["Sophie"])
 
     // 파일데이터 가지고와서 출력하기
 //    menuList.forEachIndexed { index, data ->
