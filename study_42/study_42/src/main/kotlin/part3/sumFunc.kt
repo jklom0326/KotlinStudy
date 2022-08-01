@@ -7,5 +7,3 @@ fun main() {
     println(result1)
     println(result2)
 }
-
-fun sum(a: Int, b:Int): Int = a + b
