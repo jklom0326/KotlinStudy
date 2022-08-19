@@ -1,4 +1,4 @@
-package com.example.jklom0326.chap05.section3
+package part5.section3
 
 fun main() {
     val calc = Calc()

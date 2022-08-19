@@ -1,4 +1,4 @@
-package com.example.jklom0326.chap05.section6.association
+package part5.section6.association
 
 class Patient(val name: String){
     fun doctorList(d: Doctor){

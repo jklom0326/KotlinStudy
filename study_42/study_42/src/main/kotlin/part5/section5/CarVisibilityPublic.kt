@@ -1,4 +1,4 @@
-package com.example.jklom0326.chap05.section5
+package part5.section5
 
 import java.io.BufferedReader
 

@@ -1,4 +1,4 @@
-package com.example.jklom0326.chap05.section6
+package part5.section6
 
 class Pond(_name: String, _members: MutableList<Duck>){
     val name: String = _name

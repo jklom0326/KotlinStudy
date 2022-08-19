@@ -1,5 +1,4 @@
-package com.example.jklom0326.chap05.section3.seconref
-
+package part5.section4
 class Person(firstName: String, out: Unit = println("[Primary Constructor] Parameter")){// (2) 주 생성자
     val fName = println("[Primary Constructor] Person fName $firstName") // (3) 프로퍼티 할당
 

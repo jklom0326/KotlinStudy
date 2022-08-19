@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d448bd67-1434-48e0-99cb-c77e95b8cf34" name="변경" comment="" />
+    <list default="true" id="d448bd67-1434-48e0-99cb-c77e95b8cf34" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/study_42/study_42/src/main/kotlin/part5/section1/BirdClassDefine.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_42/study_42/src/main/kotlin/part5/section2/BirdPrimaryInit.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_42/study_42/src/main/kotlin/part5/section2/BirdSecondaryConstructor.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_42/study_42/src/main/kotlin/part5/section3/BirdChildClasses.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

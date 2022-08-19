@@ -1,4 +1,4 @@
-package com.example.jklom0326.chap05.section3.override
+package part5.section3.override
 
 // 상속 가능한 클래스를 위해 open 사용
 open class Bird(var name: String, var wing: Int, var beak: String, var color: String){

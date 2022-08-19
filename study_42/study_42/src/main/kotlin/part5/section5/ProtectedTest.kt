@@ -1,4 +1,4 @@
-package com.example.jklom0326.chap05.section5
+package part5.section5
 
 open class Base { // 최상위 선언 클래스에는 protected를 사용할 수 없음
     protected var i = 1

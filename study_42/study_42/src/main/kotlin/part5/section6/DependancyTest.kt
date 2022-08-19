@@ -1,4 +1,4 @@
-package com.example.jklom0326.chap05.section6.dependency
+package part5.section6.dependency
 
 import javax.print.Doc
 

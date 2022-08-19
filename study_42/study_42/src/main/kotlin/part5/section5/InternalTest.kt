@@ -1,4 +1,4 @@
-package com.example.jklom0326.chap05.section5.internal
+package part5.section5.internal
 
 internal class InternalClass{
     internal var i = 1

@@ -1,4 +1,4 @@
-package com.example.jklom0326.chap05.section4
+package part5.section4.thissuper
 
 open class Person{
     constructor(firstName: String){

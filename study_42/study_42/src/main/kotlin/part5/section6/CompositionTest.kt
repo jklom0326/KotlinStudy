@@ -1,4 +1,4 @@
-package com.example.jklom0326.chap05.section6
+package part5.section6
 
 class Car(val name: String, val power: String){
     private var engine = Engine(power)
