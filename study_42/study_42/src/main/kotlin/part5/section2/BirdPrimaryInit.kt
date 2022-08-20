@@ -17,5 +17,4 @@ fun main() {
     coco.color = "Yellow"
     println("coco.color : ${coco.color}")
     coco.fly()
-
 }

@@ -1,6 +1,6 @@
 package part5.section3
 
-// (1) 상속 가능한 클래스를 위해 open 사용
+//  (1) 상속 가능한 클래스를 위해 open 사용
 open class Bird(var name: String, var wing: Int, var beak: String, var color: String){
     //메서드
     fun fly()= println("Fly wing: $wing")
@@ -10,7 +10,7 @@ open class Bird(var name: String, var wing: Int, var beak: String, var color: St
 class  Lark(name:String,wing: Int,beak: String, color: String) : Bird(name,wing,beak,color){
     fun singHitone() = println("Happy Song!") // 추가된 매서드
 }
-//(3) 부 생성자를 사용하는 상속
+//  (3) 부 생성자를 사용하는 상속
 class Parrot : Bird{
     val language: String
 

@@ -6,7 +6,8 @@ open class Bird(var name: String, var wing: Int, var beak: String, var color: St
     fun fly()= println("Fly wing: $wing")
     open fun sing(vol: Int)= println("sing vol : $vol") //open을 해서 오버라이딩이 가능함
 }
-class Parrot(name: String, wing: Int  =2 , beak: String, color: String, var language: String = "natural"):Bird(name,wing,beak,color){
+class Parrot(name: String, wing: Int  =2 , beak: String, color: String,
+             var language: String = "natural"):Bird(name,wing,beak,color){
 
     fun speak() = println("Speak! $language") // parrot에 추가된 메서드
     override fun sing(vol: Int){// 오버라이딩
