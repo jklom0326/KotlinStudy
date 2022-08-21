@@ -19,7 +19,7 @@ class Derived : Base(){
 
 fun main() {
     val base = Base() // 생성가능
-//    base.i  // 접근불가
-//    base.protectedFunc() // 접근불가
+    base.i  // 접근불가
+    base.protectedFunc() // 접근불가
     base.access()
 }
