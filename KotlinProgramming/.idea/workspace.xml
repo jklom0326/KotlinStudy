@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="117fac8a-9094-424f-99e7-ce4fc1aee842" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/../study_42/study_42/src/main/kotlin/part5/section5/PrivateTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../study_42/study_42/src/main/kotlin/part5/section5/PrivateTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../study_42/study_42/src/main/kotlin/part5/section5/ProtectedTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../study_42/study_42/src/main/kotlin/part5/section5/ProtectedTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../study_42/study_42/src/main/kotlin/part5/section6/AggregationTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../study_42/study_42/src/main/kotlin/part5/section6/AggregationTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KotlinInDepth/out/production/KotlinInDepth/ForloopKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../KotlinInDepth/out/production/KotlinInDepth/META-INF/KotlinInDepth.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_42/study_42/src/main/kotlin/part6/section3/CompanionObjectTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../study_42/study_42/src/main/kotlin/part6/section3/CompanionObjectTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_42/study_42/src/main/kotlin/part6/section3/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../study_42/study_42/src/main/kotlin/part6/section3/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_42/study_42/src/main/kotlin/part6/section3/OCustomerAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/../study_42/study_42/src/main/kotlin/part6/section3/OCustomerAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_42/study_42/src/main/kotlin/part6/section3/ObjectDeclaration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../study_42/study_42/src/main/kotlin/part6/section3/ObjectDeclaration.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../study_42/study_42/src/main/kotlin/part6/section3/PackageLevelAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/../study_42/study_42/src/main/kotlin/part6/section3/PackageLevelAccess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,13 +25,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/KotlinStudy/KotlinProgramming"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/KotlinStudy/KotlinProgramming&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">

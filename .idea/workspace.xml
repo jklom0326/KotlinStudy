@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d448bd67-1434-48e0-99cb-c77e95b8cf34" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/study_42/study_42/src/main/kotlin/part5/section1/BirdClassDefine.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study_42/study_42/src/main/kotlin/part5/section2/BirdPrimaryInit.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study_42/study_42/src/main/kotlin/part5/section2/BirdSecondaryConstructor.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study_42/study_42/src/main/kotlin/part5/section3/BirdChildClasses.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study_42/study_42/src/main/kotlin/part6/section3/CompanionObjectTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/study_42/study_42/src/main/kotlin/part6/section3/CompanionObjectTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study_42/study_42/src/main/kotlin/part6/section3/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/study_42/study_42/src/main/kotlin/part6/section3/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study_42/study_42/src/main/kotlin/part6/section3/OCustomerAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/study_42/study_42/src/main/kotlin/part6/section3/OCustomerAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study_42/study_42/src/main/kotlin/part6/section3/ObjectDeclaration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/study_42/study_42/src/main/kotlin/part6/section3/ObjectDeclaration.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study_42/study_42/src/main/kotlin/part6/section3/PackageLevelAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/study_42/study_42/src/main/kotlin/part6/section3/PackageLevelAccess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,4 +1,5 @@
 package part6.section3
+
 // (1) object 키워드를 사용한 방식
 object OCustomer {
     var name = "JoonSik"
