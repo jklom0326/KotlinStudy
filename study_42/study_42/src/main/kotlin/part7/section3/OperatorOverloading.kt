@@ -1,4 +1,4 @@
-package com.example.jklom0326.chap07.section3
+package part7.section3
 
 class Point(var x: Int = 0, var y: Int = 10){
     operator fun plus(p: Point): Point{

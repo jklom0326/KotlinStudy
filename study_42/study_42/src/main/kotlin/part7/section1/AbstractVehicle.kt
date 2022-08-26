@@ -13,7 +13,7 @@ abstract class Vehicle(val name: String,val color: String, val weight: Double){
     abstract fun start()
     abstract fun stop()
 
-    //일반 메서트
+    //일반 메서드
     fun displaySpecs(){
         println("Name: $name, Color: $color, Weight: $weight,Year: $year, MaxSpeed: $maxSpeed")
     }

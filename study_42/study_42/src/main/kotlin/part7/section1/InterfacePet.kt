@@ -12,7 +12,6 @@ interface Pet {
 }
 
 class  Cat(name: String, override var category: String): Pet, Animal(name) {
-
     override var species: String = "cat"
     override fun feeding() {
         println("Feed the cat a tuna can !")
