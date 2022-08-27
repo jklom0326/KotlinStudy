@@ -13,12 +13,12 @@ class  Dog(name:String, override var category: String) : Animal(name),Pet{
 }
 
 class Master {
-//    fun playwithPet(dog: Dog){
-//        println("Enjoy with my dog.")
-//    }
-//    fun playwithPet(cat: Cat){
-//        println("Enjoy with my cat.")
-//    }
+    fun playwithPet(dog: Dog){
+        println("Enjoy with my dog.")
+    }
+    fun playwithPet(cat: Cat){
+        println("Enjoy with my cat.")
+    }
 
     fun playwithPet(pet: Pet){
         println("Enjoy with my ${pet.species}")
