@@ -20,5 +20,4 @@ fun main() {
     //Outer().outside // 에러 객체생성 필요
     val outer = Outer()
     outer.outside()
-
 }

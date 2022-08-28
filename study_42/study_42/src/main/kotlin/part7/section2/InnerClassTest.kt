@@ -1,24 +1,14 @@
 package part7.section2
 
-interface Switcher{
-    fun on() : String
-}
-
-
 class Smartphone(val model: String){
     private  val cpu = "Exynos"
 
     fun powerOn(): String{
-        class  Led(val color: String){
-            fun blink(): String = "Blinking $color on $model"
+        class  Led(val color: String){ // 지역 클래스 선언
+            fun blink(): String = "Blinking $color on $model" // 외부 프로퍼티는 접근 가능
         }
-        val powerStatus = Led("Red")
-        val powerSwitch = object : Switcher{
-            override fun on(): String{
-                return powerStatus.blink()
-            }
-        }
-        return powerSwitch.on()
+        val powerStatus = Led("Red") // 여기에서 지역 클래스가 사용됨
+        return powerStatus.blink()
     } // powerOn() 블록 끝
 
     inner class ExternalStoreage(val size: Int){
