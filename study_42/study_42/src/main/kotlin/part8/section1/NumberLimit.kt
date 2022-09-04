@@ -1,7 +1,7 @@
 package part8.section1
 
 class Calc<T: Number> {
-    // 클래스의 형식매개병수 제한
+    // 클래스의 형식매개변수 제한
     fun plus(arg1: T, arg2: T): Double {
         return arg1.toDouble() + arg2.toDouble()
     }
