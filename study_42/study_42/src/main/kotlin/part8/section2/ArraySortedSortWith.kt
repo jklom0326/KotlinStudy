@@ -22,9 +22,7 @@ fun main() {
         }
     )
     products.forEach { println(it) }
-    println()
     products.sortWith(compareBy({it.name},{it.price}))
-    println()
     products.forEach { println(it) }
 }
 
