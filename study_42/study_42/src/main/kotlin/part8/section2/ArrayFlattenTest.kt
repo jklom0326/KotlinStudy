@@ -8,5 +8,4 @@ fun main() {
 
     val flattenSimpleArray = simplArray.flatten()
     println(flattenSimpleArray)
-
 }
